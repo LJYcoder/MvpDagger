@@ -1,18 +1,16 @@
 # MVP+Dagger
 
 ## 介绍
-演示如何应用MVP开发模式以及Dagger2依赖注入。
+演示如何应用MVP开发模式、以及Dagger2依赖注入。  
+其中网络请求、图片加载、数据库等操作，使用的是[DevRing基础开发库](https://github.com/LJYcoder/DevRing)，欢迎了解和★star
 
 
-## Demo
-### 运行图
+## Demo运行图
 ![screen1](screenshot/screen1.gif)&nbsp;&nbsp;&nbsp;![screen2](screenshot/screen2.gif)
 <br>
 <br>
 ![screen3](screenshot/screen3.gif)&nbsp;&nbsp;&nbsp;![screen4](screenshot/screen4.gif)
 
-<br>
-<br>
 
 ## 一键生成MVP、Dagger2代码
 可快速生成MVP相关代码，如Model、Activity/Fragment、Presenter、IModel、IView.
@@ -40,8 +38,6 @@
 <br>
 <img src="screenshot/template3.png" width="40%" height="40%">
 <br>
-<br>
-
 <br>
 
 ## 相关博客
