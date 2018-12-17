@@ -48,7 +48,7 @@ android {
     greendao {
         //数据库版本号，升级时进行修改
         schemaVersion 1
-        daoPackage 'com.dev.base.mvp.model.db.greendao' //生成的DAO，DaoMaster和DaoSession的包名。默认是实体的包名
+        daoPackage 'com.dev.base.mvp.model.db' //生成的DAO，DaoMaster和DaoSession的包名。默认是实体的包名
         targetGenDir 'src/main/java' //生成源文件的路径。默认源文件目录是在build目录中的(build/generated/source/greendao)
     }
 
@@ -85,23 +85,5 @@ dependencies {
     //如果你项目需要使用到dagger2，那就需要添加注解处理器的依赖
     annotationProcessor 'com.google.dagger:dagger-compiler:2.14.1'//用于dagger2在编译时根据注解生成相关文件
     //══════════════════════依赖注入(Dagger2)结束══════════════════════
-
-    //══════════════════════图片加载开始══════════════════════
-    //Fresco
-    //为了演示如何使用Fresco替换掉DevRing中默认的Glide，需添加Fresco的相关依赖
-    //Fresco体积较大，如果对图片加载要求不高，建议使用Glide
-    api 'com.facebook.fresco:fresco:1.5.0'
-    api 'com.facebook.fresco:animated-gif:1.5.0' //用于Fresco加载gif动图
-    api 'com.facebook.fresco:imagepipeline-okhttp3:1.3.0'//用于替换fresco的网络加载为okhttp
-    api 'jp.wasabeef:fresco-processors:2.1.0@aar'//用于提供fresco的各种图片变换
-    //══════════════════════图片加载结束══════════════════════
-
-    //══════════════════════数据库(GreenDao)开始══════════════════════
-//    api 'net.zetetic:android-database-sqlcipher:3.5.7'//使用加密数据库时需要添加，使用后会apk会变大很多，如果对安全性要求不高，不建议使用
-    //══════════════════════数据库(GreenDao)结束══════════════════════
-
-    //══════════════════════事件总线(EventBus)开始══════════════════════
-    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.0.1'//用于eventbus在编译时生成加速用的Index文件
-    //══════════════════════事件总线(EventBus)结束══════════════════════
 }
 

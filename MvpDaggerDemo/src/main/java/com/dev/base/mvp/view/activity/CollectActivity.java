@@ -19,6 +19,8 @@ import com.dev.base.mvp.view.widget.loadlayout.OnLoadListener;
 import com.dev.base.mvp.view.widget.loadlayout.State;
 import com.ljy.devring.util.CollectionUtil;
 
+import org.greenrobot.eventbus.Subscribe;
+
 import java.util.List;
 
 import javax.inject.Inject;
@@ -112,8 +114,7 @@ public class CollectActivity extends BaseActivity<CollectPresenter> implements I
     }
 
     //接收事件总线发来的事件
-    @org.greenrobot.eventbus.Subscribe //如果使用默认的EventBus则使用此@Subscribe
-    @com.dev.base.mvp.model.bus.support.Subscribe //如果使用RxBus则使用此@Subscribe
+    @Subscribe
     public void onDeleteMovie(MovieCollect movieCollect) {
         //从“电影收藏”表中删除该电影
         mPresenter.deleteFromMyCollect(movieCollect);

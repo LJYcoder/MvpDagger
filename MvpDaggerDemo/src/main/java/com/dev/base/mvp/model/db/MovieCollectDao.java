@@ -1,4 +1,4 @@
-package com.dev.base.mvp.model.db.greendao;
+package com.dev.base.mvp.model.db;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;

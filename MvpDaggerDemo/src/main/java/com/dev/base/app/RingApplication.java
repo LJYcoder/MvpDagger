@@ -4,9 +4,7 @@ import android.app.Application;
 
 import com.dev.base.R;
 import com.dev.base.app.constant.UrlConstants;
-import com.dev.base.mvp.model.bus.RxBusManager;
-import com.dev.base.mvp.model.db.nativedao.NativeDBManager;
-import com.dev.base.mvp.model.imageload.FrescoManager;
+import com.dev.base.mvp.model.db.GreenDBManager;
 import com.dev.base.mvp.view.widget.CustomToastStyle;
 import com.ljy.devring.DevRing;
 import com.ljy.devring.util.FileUtil;
@@ -63,8 +61,7 @@ public class RingApplication extends Application {
 
 
         //图片加载模块（可替换，demo演示了如何使用Fresco替换默认的Glide）
-//        DevRing.configureImage()//配置默认的Glide
-        DevRing.configureImage(new FrescoManager()) //传入Fresco管理者进行替换，注意，替换为Fresco后，相关的ImageView需换成SimpleDraweeView
+        DevRing.configureImage()//配置默认的Glide
                 .setLoadingResId(R.mipmap.ic_image_load)//设置“加载中”状态时显示的图片
                 .setErrorResId(R.mipmap.ic_image_load)//设置“加载失败”状态时显示的图片
 //                .setIsShowTransition(true)//设置是否开启状态切换时的过渡动画，默认false（有些自定义控件如果开启了过度动画，会加载不出图片）
@@ -80,12 +77,10 @@ public class RingApplication extends Application {
 //        DevRing.configureBus()//配置默认的EventBus
 //                .setIndex(new MyEventBusIndex())//设置用于加速的Index，关于index加速可以查看https://www.jianshu.com/p/6fb4d78db19b
 //                .setIsUseIndex(true);//设置是否使用index进行加速
-        DevRing.configureBus(new RxBusManager());//传入RxBus的管理者进行替换
 
 
         //数据库模块（可替换，demo演示了如何使用原生数据库替换默认的GreenDao）
-//        DevRing.configureDB(new GreenDBManager());//传入GreenDao数据库的管理者
-        DevRing.configureDB(new NativeDBManager());//传入原生数据库的管理者
+        DevRing.configureDB(new GreenDBManager());//传入GreenDao数据库的管理者
 
 
         //缓存模块

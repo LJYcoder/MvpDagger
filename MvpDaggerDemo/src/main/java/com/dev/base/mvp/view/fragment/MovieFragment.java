@@ -250,8 +250,7 @@ public class MovieFragment extends BaseFragment<MoviePresenter> implements IMovi
     }
 
     //接收事件总线发来的事件
-    @org.greenrobot.eventbus.Subscribe //如果使用默认的EventBus则使用此@Subscribe
-    @com.dev.base.mvp.model.bus.support.Subscribe //如果使用RxBus则使用此@Subscribe
+    @org.greenrobot.eventbus.Subscribe
     public void onCollectMovie(MovieRes movieRes) {
         //由于“最近上映”和“即将上映”共用一个Fragment，所以需要判断类型来区分事件
         if (movieRes.getMovieType() == mCurrentType) {

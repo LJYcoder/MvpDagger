@@ -4,10 +4,10 @@ import android.app.Application;
 
 import com.dev.base.di.qualifier.GreenDB;
 import com.dev.base.di.scope.DBScope;
-import com.dev.base.mvp.model.db.greendao.DaoMaster;
-import com.dev.base.mvp.model.db.greendao.DaoSession;
-import com.dev.base.mvp.model.db.greendao.MovieCollectDao;
-import com.dev.base.mvp.model.db.greendao.MovieGreenTableManager;
+import com.dev.base.mvp.model.db.DaoMaster;
+import com.dev.base.mvp.model.db.DaoSession;
+import com.dev.base.mvp.model.db.MovieCollectDao;
+import com.dev.base.mvp.model.db.MovieGreenTableManager;
 import com.ljy.devring.db.support.GreenOpenHelper;
 
 import org.greenrobot.greendao.AbstractDao;

@@ -39,7 +39,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:orientation="vertical">
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <ImageView
             android:id="@+id/iv_select_photo"
             android:layout_width="150dp"
             android:layout_height="150dp"

@@ -25,6 +25,8 @@ import com.ljy.devring.DevRing;
 import com.ljy.devring.image.support.LoadOption;
 import com.ljy.devring.other.toast.RingToast;
 
+import org.greenrobot.eventbus.Subscribe;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -287,8 +289,7 @@ public class MovieActivity extends BaseActivity {
     }
 
     //接收事件总线发来的事件
-    @org.greenrobot.eventbus.Subscribe //如果使用默认的EventBus则使用此@Subscribe
-    @com.dev.base.mvp.model.bus.support.Subscribe //如果使用RxBus则使用此@Subscribe
+    @Subscribe //如果使用默认的EventBus则使用此@Subscribe
     public void handleEvent(CollectCountEvent event) {
         //更新侧滑栏中菜单项的收藏数量
         mNavigationView.getMenu().findItem(R.id.nav_item_collect).setTitle(getResources().getString(R.string.collect, event.getCount()));

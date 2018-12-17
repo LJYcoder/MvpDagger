@@ -1,4 +1,4 @@
-package com.dev.base.mvp.model.db.greendao;
+package com.dev.base.mvp.model.db;
 
 import com.dev.base.mvp.model.entity.table.MovieCollect;
 import com.ljy.devring.db.GreenTableManager;
